@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>PRUEBA CON ANGULAR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body ng-controller="EntidadController">
+        <h1>{{mensaje}}</h1>
+        <button ng-click="cambiarMensaje()">CAMBIO</button>
+        <br><br>
+        Mensaje:<input ng-model="mensaje">
+        <br><br>
+        <form>
+            <fieldset>
+                <legend>Entidad Bancaria</legend>
+                <label for="idEntidadBancaria">IdEntidadBancaria: <input id="idEntidad" type="text" ng-model="entidad.idEntidadBancaria" /></label><br><br>
+                <label for="nombreEntidad">Nombre: <input id="nombre" type="text" ng-model="entidad.nombreEntidad" /></label><br><br>
+                <label for="codigoEntidad">Código:  <input id="codigo" type="text" ng-model="entidad.codigoEntidad" /></label><br><br>
+                <label for="fechaCreacion">Fecha de creación: <input id="fecha" type="text" ng-model="entidad.fechaCreacion" /></label><br><br>
+                <label for="mayor25">Mayor de 25 ?: <input id="edadMayor" type="text" ng-model="entidad.edadMayor" /></label><br><br>
+                <label for="conDescuento">Con descuento ?: <input ng-disabled="entidad.edadMayor<=25" id="descuento" type="checkbox" ng-model="entidad.conDescuento" /></label><br><br>
+            </fieldset>
+        </form>
+    </body>
+</html>
