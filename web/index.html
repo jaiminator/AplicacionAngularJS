@@ -24,5 +24,19 @@
                 <label for="conDescuento">Con descuento ?: <input ng-disabled="entidad.edadMayor<=25" id="descuento" type="checkbox" ng-model="entidad.conDescuento" /></label><br><br>
             </fieldset>
         </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>IdProvincia</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="nube in nubes">
+                  <td>{{nube.idNube}}</td>
+                  <td>{{nube.nombre}}</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>
